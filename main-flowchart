@@ -1,0 +1,66 @@
+Trivium
+1. Mulai
+   [Simbol Awal/Selesai]
+
+2. Inisialisasi
+   [Simbol Proses]
+   - Inisialisasi variabel Kunci (Key) dan Vektor Inisialisasi (IV)
+   - Inisialisasi keadaan awal register Trivium (A, B, C)
+   - Set counter = 0
+
+3. Bagi Teks menjadi Blok-Blok
+   [Simbol Keputusan]
+   - Apakah panjang teks yang akan diproses lebih besar dari ukuran blok?
+     - Jika ya, lakukan langkah-langkah berikut:
+       - Bagi teks menjadi blok-blok dengan ukuran blok yang ditentukan
+       - Simpan jumlah blok teks
+     - Jika tidak, lanjutkan ke langkah 5
+
+4. Looping Blok
+   [Simbol Looping]
+   - Untuk setiap blok teks, lakukan langkah-langkah berikut:
+     [Simbol Proses]
+     - Ambil blok teks saat ini
+     - Generate keystream dengan menggabungkan output dari register A, B, dan C
+     - XOR-kan keystream dengan blok teks untuk menghasilkan blok teks terenkripsi
+     - Update register A, B, dan C dengan operasi XOR dan shift bit
+
+5. Selesai Looping Blok
+   [Simbol Penghubung]
+
+6. Selesai
+   [Simbol Awal/Selesai]
+
+Grain 128
+
+1. Mulai
+   [Simbol Awal/Selesai]
+
+2. Inisialisasi
+   [Simbol Proses]
+   - Inisialisasi variabel Kunci (Key)
+   - Inisialisasi keadaan awal register Grain (LFSR, NFSR)
+   - Set counter = 0
+
+3. Bagi Teks menjadi Blok-Blok
+   [Simbol Keputusan]
+   - Apakah panjang teks yang akan diproses lebih besar dari ukuran blok?
+     - Jika ya, lakukan langkah-langkah berikut:
+       - Bagi teks menjadi blok-blok dengan ukuran blok yang ditentukan
+       - Simpan jumlah blok teks
+     - Jika tidak, lanjutkan ke langkah 5
+
+4. Looping Blok
+   [Simbol Looping]
+   - Untuk setiap blok teks, lakukan langkah-langkah berikut:
+     [Simbol Proses]
+     - Ambil blok teks saat ini
+     - Generate keystream dengan menggabungkan output dari register LFSR dan NFSR
+     - XOR-kan keystream dengan blok teks untuk menghasilkan blok teks terenkripsi
+     - Update register LFSR dan NFSR dengan operasi XOR dan shift bit
+
+5. Selesai Looping Blok
+   [Simbol Penghubung]
+
+6. Selesai
+   [Simbol Awal/Selesai]
